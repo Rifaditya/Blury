@@ -16,7 +16,6 @@ init -1 python:
             can_cont = True
             renpy.restart_interaction()
 init:
-
     transform my_pos:
         yanchor -1 yalign -1
         xanchor .5 xalign .5
@@ -44,7 +43,7 @@ init:
             xalign 0.5 yalign 0.5
             zoom 1
             linear 2.0 zoom 0 xalign 0.0 yalign 1.0
-    define pname = persistent.pname
+
     define slow_dissolve = Dissolve(3.0)
     define eyeseffect = Image("eyeopen.png")
     define eye_open = ImageDissolve( eyeseffect, 1.5, 100)

@@ -1,4 +1,5 @@
 init:
+    define pname = persistent.pname
     default _list = ["McCartney", "Lennon", "Harrison", "Starr", "Paul", "John", "George", "Ringo"]
     default persistent.pname = ""
 init python:
