@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/definer.rpy", line 90: expected 'comma or end of line' not found.
-    image ctc_blink:
-    ^
+File "game/credits.rpy", line 7: invalid syntax
+    "wagu_black.png" yalign 0.5
+                           ^
 
 Ren'Py Version: Ren'Py 7.1.3.1092
-Tue Dec 25 21:35:20 2018
+Wed Dec 26 02:07:32 2018

@@ -20,7 +20,7 @@ label start_dream:
     $ renpy.pause(2, hard=True)
     player "Huh?{w} It's already 12:30?"
     player "It's Holiday so i don't have to go to school i guess."
-
+    jump credits
     return
 label cancel_dream:
     $ persistent.play = True

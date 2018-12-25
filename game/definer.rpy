@@ -61,6 +61,7 @@ init:
     define shatter = ImageDissolve("wipes/shatter.png", 1.0, 8)
     define ccirclewipe = ImageDissolve("wipes/circlewipe-ccw.jpg", 1.0, 8)
     define audio.mallmusic = "musics/music/m4.ogg"
+    image splash = "wagu_white.png"
     image bg black = "#000000"
     image white = "#ffffff"
     image logo = "wagu_white.png"
