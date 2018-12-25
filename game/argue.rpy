@@ -10,7 +10,7 @@ label start_dream:
     return
 label cancel_dream:
     $ renpy.block_rollback()
-    quesion1 "Anyone can make mistake you know."
+    question1 "Anyone can make mistake you know."
     question "Now there's nothing we can do."
     question1 "There is..."
     question "What?"

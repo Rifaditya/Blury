@@ -1,14 +1,14 @@
 
 label start:
+    $ persistent.play = True
+    if persistent.paly == True:
+        jump start_dream
     call screen input_name(Put_action=Function(FinishGuess))
     if pname == "":
         "Please give your character a name that is between 2-6's characters long."
         jump start
     $ _window_during_transitions = True
-    $ persistent.play = True
     scene bg black
-    if persistent.paly == True:
-        jump start_dream
     n1 "Dark room. A dark room no one can see."
     n1 "There'two people in that dark room, and they are the only one can see there."
     question1 "Hmmmm... shaa shhh shssa tch."

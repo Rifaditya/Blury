@@ -16,6 +16,8 @@ init -1 python:
             can_cont = True
             renpy.restart_interaction()
 init:
+    define pname = persistent.pname
+    default persistent.paly = False
     transform my_pos:
         yanchor -1 yalign -1
         xanchor .5 xalign .5
@@ -55,7 +57,6 @@ init:
     default delay_done = True
     default can_cont = True
     default persistent.warning = True
-    default persistent.paly = False
     image bg black = "#000000"
     image white = "#ffffff"
     image logo = "wagu_white.png"
@@ -64,11 +65,11 @@ init:
     define audio.alarm = "musics/sfx/alarm.mp3"
     define audio.pick_up = "musics/sfx/pick_up.mp3"
     define audio.put_down = "musics/sfx/put_down.mp3"
-
-image room:
+init 1:
+    image room:
         "room_morning_light_off.jpg"
         size(1280, 720)
-image room_blink:
+    image room_blink:
         "#000" with eye_shut
         1.5
         "room_morning_light_off.jpg" with eye_open
@@ -86,33 +87,33 @@ image room_blink:
         "room_morning_light_off.jpg" with eye_open
         size(1280, 720)
 
-image ctc_blink:
+    image ctc_blink:
         "arrow.png"
         linear 0.75 alpha 1.0
         linear 0.75 alpha 0.0
         repeat
 
-define maya = Character(_('Maya'),
+    define maya = Character(_('Maya'),
         color="#ff69b4",
         what_slow_abortable=False,
         callback=no_inter,
         ctc="ctc_blink",
         ctc_position="nestled")
-define n1 = Character(None,
+    define n1 = Character(None,
         ctc="ctc_blink",
         ctc_position="nestled",)
-define player = DynamicCharacter(pname,
+    define player = DynamicCharacter(pname,
         color="#4286f4",
         ctc="ctc_blink",
         ctc_position="nestled")
-define question = Character("???",
+    define question = Character("???",
         who_color="#009178",
         ctc="ctc_blink",
         ctc_position="nestled")
-define question1 = Character("???",
+    define question1 = Character("???",
         who_color="#001891",
         ctc="ctc_blink",
         ctc_position="nestled")
-define questions = Character("{color=#001891}???{/color}{color=#000} & {/color}{color=#009178}???{/color}",
+    define questions = Character("{color=#001891}???{/color}{color=#000} & {/color}{color=#009178}???{/color}",
         ctc="ctc_blink",
         ctc_position="nestled")
