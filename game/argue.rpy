@@ -1,4 +1,5 @@
 label start_dream:
+    $ persistent.play = True
     $ _window_during_transitions = False
     $ renpy.block_rollback()
     $ _window_hide(trans=ccirclewipe)
@@ -7,9 +8,15 @@ label start_dream:
     pause 1
     play sound_loud alarm
     $ renpy.pause(10, hard=True)
-    player "Test"
+    n1 "Morning alarm [player] just wake up in his bedroom."
+    n1 "A sleepy face Looking across the room. lonelyness are the only friend.
+    A messy spiky hair like a hegdehog feeling in danger."
+    n1 "{i}Seriously I'm still not good with narrator i need to read some novel.{w}
+    {p}For real this is suck{/i}"
+    player "Ugghh..."
     return
 label cancel_dream:
+    $ persistent.play = True
     $ renpy.block_rollback()
     question1 "Anyone can make mistake you know."
     question "Now there's nothing we can do."

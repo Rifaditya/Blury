@@ -21,6 +21,7 @@ screen input_player_name(name_action):
                 style "confirm_prompt"
                 xalign 0.5
             input default "None" value VariableInputValue("pname") length 20 allow " abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
             hbox:
                 xalign 0.5
                 spacing 100

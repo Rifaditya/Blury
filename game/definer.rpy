@@ -91,7 +91,24 @@ init 1:
         2
         "room_morning_light_off.jpg" with eye_open
         size(1280, 720)
-
+    image room_blink_continue:
+        "#000" with eye_shut
+        1.5
+        "room_morning_light_off.jpg" with eye_open
+        size(1280, 720)
+        2
+        "#000" with eye_shut
+        size(1280, 720)
+        2
+        "room_morning_light_off.jpg" with eye_open
+        size(1280, 720)
+        2
+        "#000" with eye_shut
+        size(1280, 720)
+        2
+        "room_morning_light_off.jpg" with eye_open
+        size(1280, 720)
+        repeat
     image ctc_blink:
         "arrow.png"
         linear 0.75 alpha 1.0
