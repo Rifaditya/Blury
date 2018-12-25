@@ -2,9 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/argue.rpy", line 19: expected statement.
-    puse 1.5aafaf
-          ^
+File "game/argue.rpy", line 5: play requires a file
+    play sound_loud
+                   ^
+
+File "game/definer.rpy", line 32: init statement expects a non-empty block.
+    init:
+         ^
 
 Ren'Py Version: Ren'Py 7.1.3.1092
-Tue Dec 25 15:18:42 2018
+Tue Dec 25 21:12:34 2018

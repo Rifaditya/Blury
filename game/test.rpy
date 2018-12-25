@@ -1,3 +1,0 @@
-label tst:
-    return
-#uaefka
