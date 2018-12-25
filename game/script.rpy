@@ -1,12 +1,23 @@
 
 label start:
+    python:
+
+        gen = GENERATOR()
+        gen1 = GENERATOR1()
+        #This lets us use the GENERATOR class as just "gen"
+
+    $ gen.malename()
+    $ gen1.femalename()
+    #At this point the game will run what you made it do on the malename
+    #function of the GENERATOR (now just gen) class. With that, it will
+    #create a name out both lists nad store it at gen_name
     if persistent.play == True:
         jump start_dream
     call screen input_player_name(name_action=Function(FinishName))
     $ persistent.play = True
     if pname == "":
-        "Please give your character a name that is between 2-6's characters long."
-        jump start
+        "Please give your character a name that is between 2-20's characters long."
+        call call_naming
     $ _window_during_transitions = True
     scene bg black
     n1 "Dark room. A dark room no one can see."
@@ -42,4 +53,11 @@ label start:
         "No":
             question "NO! Why you make a mistake in the first place!?"
             jump cancel_dream #file argue
+    return
+label call_naming:
+    call screen input_player_name(name_action=Function(FinishName))
+    if pname == "":
+        "Please give your character a name that is between 2-20's characters long."
+        jump call_naming
+
     return

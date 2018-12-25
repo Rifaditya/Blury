@@ -25,7 +25,6 @@ init -2:
         "warning.png"
         size(1280, 720)
 init -3:
-    define m_name = ""
     define persistent.pname = ""
 init:
     transform my_pos:
