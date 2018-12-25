@@ -14,6 +14,13 @@ label start_dream:
     n1 "{i}Seriously I'm still not good with narrator i need to read some novel.{w}
     {p}For real this is suck{/i}"
     player "Ugghh..."
+    $ _window_hide(trans=Dissolve(1.5))
+    play sound_loud pick_up
+    show phone at coming_corner_down_left
+    $ renpy.pause(2, hard=True)
+    player "Huh?{w} It's already 12:30?"
+    player "It's Holiday so i don't have to go to school i guess."
+
     return
 label cancel_dream:
     $ persistent.play = True

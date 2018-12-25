@@ -1,4 +1,17 @@
+label call_naming:
 
+    call screen input_player_name(name_action=Function(FinishName))
+
+    if pname == "":
+        "Please give your character a name that is between 2-20's characters long."
+        jump call_naming
+    if pname is not None:
+        $ check_name = len(pname)
+        if check_name == 1:
+            "You must name your character a minimum of 2 letters."
+            jump call_naming
+
+    return
 label start:
 
     python:
@@ -61,19 +74,5 @@ label start:
         "No":
             question "NO! Why you make a mistake in the first place!?"
             jump cancel_dream #file argue
-
-    return
-label call_naming:
-
-    call screen input_player_name(name_action=Function(FinishName))
-
-    if pname == "":
-        "Please give your character a name that is between 2-20's characters long."
-        jump call_naming
-    if pname is not None:
-        $ check_name = len(pname)
-        if check_name == 1:
-            "You must name your character a minimum of 2 letters."
-            jump call_naming
 
     return

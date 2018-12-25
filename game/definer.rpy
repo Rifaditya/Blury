@@ -42,7 +42,7 @@ init:
             linear 2.0 alpha 1
         on hide:
             linear 2.0 alpha 0
-    transform coming_corner_down_right:
+    transform coming_corner_down_left:
         on show:
             xalign 0.0 yalign 1.0
             zoom 0
