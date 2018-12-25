@@ -1,9 +1,9 @@
 
 label start:
-    $ persistent.play = True
-    if persistent.paly == True:
+    if persistent.play == True:
         jump start_dream
-    call screen input_name(Put_action=Function(FinishGuess))
+    call screen input_player_name(name_action=Function(FinishName))
+    $ persistent.play = True
     if pname == "":
         "Please give your character a name that is between 2-6's characters long."
         jump start

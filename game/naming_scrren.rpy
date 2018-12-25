@@ -1,11 +1,7 @@
-init:
-    
-    default _list = ["McCartney", "Lennon", "Harrison", "Starr", "Paul", "John", "George", "Ringo"]
-    default persistent.pname = ""
 init python:
-    def FinishGuess():
+    def FinishName():
         persistent.pname = pname
-screen input_name(Put_action):
+screen input_player_name(name_action):
 
     modal True
 
@@ -29,4 +25,4 @@ screen input_name(Put_action):
                 xalign 0.5
                 spacing 100
 
-                textbutton _("Name It!") action Return()
+                textbutton _("Name It!") action  [name_action, Hide("input_player_name"), Return()]

@@ -114,7 +114,7 @@ define gui.name_xalign = 0.08
 ## The width, height, and borders of the box containing the character's name, or
 ## None to automatically size it.
 define gui.namebox_width = 400
-define gui.namebox_height = 100
+define gui.namebox_height = 80
 
 ## The borders of the box containing the character's name, in left, top, right,
 ## bottom order.
@@ -129,7 +129,7 @@ define gui.namebox_tile = False
 ## number of pixels relative to the left or top side of the textbox, or 0.5 to
 ## center.
 define gui.dialogue_xpos = 268
-define gui.dialogue_ypos = 10
+define gui.dialogue_ypos = -5
 
 ## The maximum width of dialogue text, in pixels.
 define gui.dialogue_width = 744

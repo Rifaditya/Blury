@@ -1,12 +1,13 @@
 label start_dream:
+    $ _window_during_transitions = False
     $ renpy.block_rollback()
     $ _window_hide(trans=ccirclewipe)
     scene bg black
-    play sound_loud alarm
     scene room_blink
-    $ renpy.pause(12, hard=True)
-    player "Uggh..."
-    player "What?"
+    pause 1
+    play sound_loud alarm
+    $ renpy.pause(10, hard=True)
+    player "Test"
     return
 label cancel_dream:
     $ renpy.block_rollback()

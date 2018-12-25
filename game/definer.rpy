@@ -15,20 +15,28 @@ init -1 python:
         if event == "slow_done" or event == "end":
             can_cont = True
             renpy.restart_interaction()
+init -2:
+    define pname = ""
+    default persistent.play = False
+    default delay_done = True
+    default can_cont = True
+    default persistent.warning = True
+    image warning:
+        "warning.png"
+        size(1280, 720)
+init -3:
+    define m_name = ""
+    define persistent.pname = ""
 init:
-    define pname = persistent.pname
-    default persistent.paly = False
     transform my_pos:
         yanchor -1 yalign -1
         xanchor .5 xalign .5
-
     transform transform_logo:
         on show:
             alpha 0 xalign 0.5 yalign 0.5
             linear 1.5 alpha 1
         on hide:
             linear .9 alpha 0
-
     transform transform_white:
         on show:
             alpha 0
@@ -54,9 +62,6 @@ init:
     define shatter = ImageDissolve("wipes/shatter.png", 1.0, 8)
     define ccirclewipe = ImageDissolve("wipes/circlewipe-ccw.jpg", 1.0, 8)
     define audio.mallmusic = "musics/music/m4.ogg"
-    default delay_done = True
-    default can_cont = True
-    default persistent.warning = True
     image bg black = "#000000"
     image white = "#ffffff"
     image logo = "wagu_white.png"
@@ -69,6 +74,7 @@ init 1:
     image room:
         "room_morning_light_off.jpg"
         size(1280, 720)
+
     image room_blink:
         "#000" with eye_shut
         1.5
@@ -102,7 +108,7 @@ init 1:
     define n1 = Character(None,
         ctc="ctc_blink",
         ctc_position="nestled",)
-    define player = DynamicCharacter(pname,
+    define player = DynamicCharacter("persistent.pname",
         color="#4286f4",
         ctc="ctc_blink",
         ctc_position="nestled")
