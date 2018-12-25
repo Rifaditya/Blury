@@ -3,7 +3,7 @@ errors listed below, and try again.
 
 
 File "game/argue.rpy", line 19: expected statement.
-    puse 1.5
+    puse 1.5aafaf
           ^
 
 Ren'Py Version: Ren'Py 7.1.3.1092
