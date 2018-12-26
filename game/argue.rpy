@@ -1,5 +1,6 @@
 label start_dream:
     $ persistent.play = True
+    $ allocate_screen("Start Dreams")
     $ _window_during_transitions = False
     $ renpy.block_rollback()
     $ _window_hide(trans=ccirclewipe)
@@ -20,9 +21,18 @@ label start_dream:
     $ renpy.pause(2, hard=True)
     player "Huh?{w} It's already 12:30?"
     player "It's Holiday so i don't have to go to school i guess."
-    
+    $ _window_hide(trans=Dissolve(1.5))
+    hide phone at coming_corner_down_left
+    $ renpy.pause(2, hard=True)
+    play sound_loud slam
+    scene room
+    with vpunch
+    player "The F!"
+    player "What is that sound?"
+    jump The_sound
     return
 label cancel_dream:
+    $ allocate_screen("Start Over")
     $ persistent.play = True
     $ renpy.block_rollback()
     question1 "Anyone can make mistake you know."

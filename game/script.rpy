@@ -38,6 +38,7 @@ label start:
 
     $ _window_during_transitions = True
     scene bg black
+    $ allocate_screen("Name It!")
 
     n1 "Dark room. A dark room no one can see."
     n1 "There'two people in that dark room, and they are the only one can see there."

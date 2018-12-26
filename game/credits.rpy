@@ -56,7 +56,7 @@ label credits:
     return
 
 init python:
-    credits = ('Backgrounds', "uncle Mugen's BG {a=https://twitter.com/unclemugen}Twitter{/a}"), ('Backgrounds', '...'), ('Sprites', 'neko-niki  {a=https://www.deviantart.com/neko-niki}Deviantart{/a} {a=https://www.neko-niki.tumblr.com}Tumblr{/a} {a=https://www.twitter.com/nekoniki_}Twitter{/a}'), ('GUI', 'Rifaditya Fadillah'), ('Writing', 'Rifaditya Fadillah'), ('Writing', '...'), ('Programming', 'Rifaditya Fadillah'), ('Music', '...'), ('Music', '...'), ('SFX', 'Pick up by freesfx.co.uk {a=https://www.freesfx.co.uk/Default.aspx} Website {/a}'), ('SFX','Put Down by freesfx.co.uk {a=https://www.freesfx.co.uk/Default.aspx} Website {/a}'), ('SFX','Alarm by "I FORGOT"')
+    credits = ('Backgrounds', "uncle Mugen's BG {a=https://twitter.com/unclemugen}Twitter{/a}"), ('Backgrounds', '...'), ('Sprites', 'neko-niki  {a=https://www.deviantart.com/neko-niki}Deviantart{/a} {a=https://www.neko-niki.tumblr.com}Tumblr{/a} {a=https://www.twitter.com/nekoniki_}Twitter{/a}'), ('GUI', 'Rifaditya Fadillah'), ('Writing', 'Rifaditya Fadillah'), ('Writing', '...'), ('Programming', 'Rifaditya Fadillah'), ('Music', '...'), ('Music', '...'), ('SFX', 'Pick up by freesfx.co.uk {a=https://www.freesfx.co.uk/Default.aspx} Website {/a}'), ('SFX','Put Down by freesfx.co.uk {a=https://www.freesfx.co.uk/Default.aspx} Website {/a}'), ('SFX','Alarm by "I FORGOT"'), ('SFX', 'Slam by .audiomicro.com {a=https://www.audiomicro.com}Website{/a}')
     credits_s = "{size=80}Blury\n\n"
     c1 = ''
     for c in credits:

@@ -70,6 +70,7 @@ init:
     define audio.alarm = "musics/sfx/alarm.mp3"
     define audio.pick_up = "musics/sfx/pick_up.mp3"
     define audio.put_down = "musics/sfx/put_down.mp3"
+    define audio.slam = "musics/sfx/Door slaming.wav"
 init 1:
     image room:
         "room_morning_light_off.jpg"
