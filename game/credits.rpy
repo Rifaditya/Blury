@@ -21,9 +21,28 @@ label credits:
     with dissolve
     with Pause(credits_speed - 1)
     show splash:
-        yalign 0.5 xalign 0.5
+        yalign .5 subpixel True
+
+        parallel:
+            xalign .5
+            linear 3.0 xalign .75
+            linear 6.0 xalign .25
+            linear 3.0 xalign .5
+            repeat
+
+        parallel:
+            alpha 1.0 zoom 1.0
+            linear .75 alpha .5 zoom .9
+            linear .75 alpha 1.0 zoom 1.0
+            repeat
+
+        parallel:
+            rotate 0
+            linear 5 rotate 360
+            repeat
+
     with dissolve
-    with Pause(3)
+    with Pause(10)
     hide splash
     with dissolve
     with Pause(1)
@@ -37,7 +56,7 @@ label credits:
     return
 
 init python:
-    credits = ('Backgrounds', "uncle Mugen's BG {a=https://twitter.com/unclemugen}Twitter{/a}"), ('Backgrounds', '...'), ('Sprites', 'neko-niki  {a=https://www.deviantart.com/neko-niki}Deviantart{/a} {a=https://www.neko-niki.tumblr.com}Tumblr{/a} {a=https://www.twitter.com/nekoniki_}Twitter{/a}'), ('GUI', 'Rifaditya Fadillah'), ('Writing', 'Rifaditya Fadillah'), ('Writing', '...'), ('Programming', 'Rifaditya Fadillah'), ('Music', 'Grumblemuck'), ('Music', 'Headwookum')
+    credits = ('Backgrounds', "uncle Mugen's BG {a=https://twitter.com/unclemugen}Twitter{/a}"), ('Backgrounds', '...'), ('Sprites', 'neko-niki  {a=https://www.deviantart.com/neko-niki}Deviantart{/a} {a=https://www.neko-niki.tumblr.com}Tumblr{/a} {a=https://www.twitter.com/nekoniki_}Twitter{/a}'), ('GUI', 'Rifaditya Fadillah'), ('Writing', 'Rifaditya Fadillah'), ('Writing', '...'), ('Programming', 'Rifaditya Fadillah'), ('Music', '...'), ('Music', '...'), ('SFX', 'Pick up by freesfx.co.uk {a=https://www.freesfx.co.uk/Default.aspx} Website {/a}'), ('SFX','Put Down by freesfx.co.uk {a=https://www.freesfx.co.uk/Default.aspx} Website {/a}'), ('SFX','Alarm by "I FORGOT"')
     credits_s = "{size=80}Blury\n\n"
     c1 = ''
     for c in credits:
